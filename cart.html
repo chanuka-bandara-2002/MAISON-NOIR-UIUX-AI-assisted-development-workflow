@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Shopping Cart — MAISON NOIR</title>
+  <meta name="description" content="Review your curated archival selection, modify quantities, apply privilege codes, and proceed to secure checkout.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>MN</text></svg>">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'brand-black': '#0a0a0a',
+            'brand-dark': '#111111',
+            'brand-white': '#ffffff',
+            'brand-gray-light': '#f5f5f5',
+            'brand-gray-bg': '#f8f8f8',
+            'brand-gray-input': '#ececec',
+            'brand-gray-border': '#e5e5e5',
+            'brand-gray-muted': '#737373',
+            'brand-gray-pill': '#ededed',
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+          },
+          aspectRatio: {
+            '3/4': '3 / 4',
+            '4/5': '4 / 5',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="bg-white text-black antialiased selection:bg-black selection:text-white">
+
+  <!-- Shared Header Injected by JS -->
+  <div id="site-header"></div>
+
+  <main id="main-content" class="py-10 sm:py-14">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
+      
+      <!-- Cart Page Title (Matching Screenshot Layout) -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 pb-8 border-b border-[#e5e5e5] mb-10">
+        <div>
+          <span class="text-[10px] tracking-[0.25em] uppercase text-neutral-400 font-semibold block mb-1">
+            ARCHIVAL SELECTION
+          </span>
+          <h1 class="text-3xl sm:text-5xl font-bold tracking-tight uppercase text-black font-sans leading-none">
+            YOUR SHOPPING CART
+          </h1>
+        </div>
+        <p id="cart-header-count" class="text-xs text-neutral-500 tracking-[0.16em] uppercase text-left md:text-right font-medium">
+          3 CURATED PIECES ARCHIVED — HELD TEMPORARILY
+        </p>
+      </div>
+
+      <!-- Empty Cart State -->
+      <div id="cart-empty-state" class="hidden text-center py-24 border border-dashed border-neutral-300 bg-[#fafafa]">
+        <h2 class="text-xl font-bold tracking-[0.2em] uppercase text-black mb-3">YOUR ARCHIVAL BAG IS EMPTY</h2>
+        <p class="text-xs text-neutral-500 tracking-wider mb-8">No garments currently held in your session.</p>
+        <a href="collection.html" class="btn-noir-solid text-xs">EXPLORE THE COLLECTION</a>
+      </div>
+
+      <!-- Main Cart Content Wrapper -->
+      <div id="cart-content-wrapper" class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+        
+        <!-- Left: Cart Items List (8 cols) -->
+        <div class="lg:col-span-8">
+          <div id="cart-items-container" class="space-y-4">
+            <!-- Dynamically rendered by main.js -->
+          </div>
+        </div>
+
+        <!-- Right: Order Summary Box (4 cols) -->
+        <div class="lg:col-span-4 bg-[#f5f5f5] p-6 sm:p-8 border border-neutral-200">
+          <h2 class="text-sm font-bold tracking-[0.2em] uppercase text-black mb-6">
+            ORDER SUMMARY
+          </h2>
+
+          <div class="space-y-4 text-xs tracking-wider pb-6 border-b border-neutral-300">
+            <div class="flex items-center justify-between">
+              <span class="text-neutral-600 uppercase font-medium">SUBTOTAL</span>
+              <span id="cart-subtotal" class="font-bold text-black">LKR 145,000</span>
+            </div>
+
+            <div class="flex items-center justify-between">
+              <span class="text-neutral-600 uppercase font-medium">SHIPPING</span>
+              <span id="cart-shipping" class="font-semibold text-black uppercase">COMPLIMENTARY</span>
+            </div>
+
+            <div class="flex items-center justify-between text-neutral-500 text-[11px]">
+              <span>Sri Lanka Inland VAT &amp; Duties (15%)</span>
+              <span class="uppercase font-medium text-neutral-700">INCLUDED</span>
+            </div>
+
+            <!-- Privilege Promo Discount Row -->
+            <div id="cart-promo-row" class="hidden flex items-center justify-between text-emerald-700 font-semibold">
+              <span class="uppercase">PRIVILEGE REDUCTION</span>
+              <span id="cart-promo-amount">- LKR 0</span>
+            </div>
+          </div>
+
+          <!-- Total -->
+          <div class="flex items-center justify-between py-6 border-b border-neutral-300">
+            <span class="text-xs font-bold tracking-[0.2em] uppercase text-black">TOTAL</span>
+            <span id="cart-total" class="text-base font-bold tracking-wide text-black">LKR 145,500</span>
+          </div>
+
+          <!-- Promo Code Section -->
+          <div class="pt-6 pb-6">
+            <label for="cart-promo-input" class="block text-[10px] font-bold tracking-[0.2em] uppercase text-neutral-500 mb-2">
+              HAVE A PROMO CODE?
+            </label>
+            <div class="flex">
+              <input type="text" 
+                     id="cart-promo-input" 
+                     placeholder="ENTER CODE (E.G. MAISON10)" 
+                     class="noir-input flex-1 bg-white border border-neutral-300 focus:border-black text-xs">
+              <button type="button" id="cart-promo-btn" class="btn-noir-solid py-2.5 px-5 text-xs shrink-0">
+                APPLY
+              </button>
+            </div>
+          </div>
+
+          <!-- Proceed to Checkout Button -->
+          <div>
+            <a href="checkout.html" class="btn-noir-solid w-full block text-center py-4 text-xs font-bold">
+              PROCEED TO CHECKOUT
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Black Banner: COMPLETE YOUR LOOK -->
+    <section class="bg-black text-white py-16 mt-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 text-center mb-10">
+        <h2 class="text-xl sm:text-2xl font-bold tracking-[0.2em] uppercase text-white mb-2">
+          COMPLETE YOUR LOOK
+        </h2>
+        <p class="text-xs text-neutral-400 tracking-wider">
+          Considered accessories to complement your Maison Noir wardrobe.
+        </p>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
+        <div id="cart-accessories-grid" class="grid grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Rendered dynamically by main.js -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Shared Footer Injected by JS -->
+  <div id="site-footer"></div>
+
+  <!-- Main JavaScript Module -->
+  <script type="module">
+    import { initCartPage } from './js/main.js';
+    initCartPage();
+  </script>
+</body>
+</html>

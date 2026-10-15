@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Secure Checkout — MAISON NOIR</title>
+  <meta name="description" content="Maison Noir Secure Checkout. Complete your order with encrypted payment and express atelier dispatch.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>MN</text></svg>">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'brand-black': '#0a0a0a',
+            'brand-dark': '#111111',
+            'brand-white': '#ffffff',
+            'brand-gray-light': '#f5f5f5',
+            'brand-gray-bg': '#f8f8f8',
+            'brand-gray-input': '#ececec',
+            'brand-gray-border': '#e5e5e5',
+            'brand-gray-muted': '#737373',
+            'brand-gray-pill': '#ededed',
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="bg-white text-black antialiased selection:bg-black selection:text-white">
+
+  <!-- Shared Header Injected by JS -->
+  <div id="site-header"></div>
+
+  <main id="main-content" class="py-10 sm:py-14">
+    <div class="max-w-4xl mx-auto px-4 sm:px-8">
+      
+      <!-- Checkout Header (Matching Design Screenshot) -->
+      <div class="flex items-center justify-between pb-6 border-b border-[#e5e5e5] mb-8">
+        <h1 class="text-2xl sm:text-4xl font-bold tracking-tight uppercase text-black font-sans">
+          SECURE CHECKOUT
+        </h1>
+        <span class="text-xs sm:text-sm font-semibold tracking-[0.25em] uppercase text-neutral-800 font-sans">
+          MAISON NOIR
+        </span>
+      </div>
+
+      <form id="checkout-form" class="space-y-8" novalidate>
+        
+        <!-- SECTION 1: CONTACT INFORMATION -->
+        <div class="border border-neutral-200">
+          <div class="checkout-section-header">
+            CONTACT INFORMATION
+          </div>
+          <div class="p-5 sm:p-6 bg-white grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label for="checkout-email" class="sr-only">Email Address</label>
+              <input type="email" id="checkout-email" placeholder="EMAIL ADDRESS" required class="noir-input">
+            </div>
+            <div>
+              <label for="checkout-phone" class="sr-only">Phone Number</label>
+              <input type="tel" id="checkout-phone" placeholder="PHONE NUMBER" required class="noir-input">
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 2: DELIVERY INFORMATION -->
+        <div class="border border-neutral-200">
+          <div class="checkout-section-header">
+            DELIVERY INFORMATION
+          </div>
+          <div class="p-5 sm:p-6 bg-white space-y-4">
+            <!-- Row: Names -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label for="checkout-first-name" class="sr-only">First Name</label>
+                <input type="text" id="checkout-first-name" placeholder="FIRST NAME" required class="noir-input">
+              </div>
+              <div>
+                <label for="checkout-last-name" class="sr-only">Last Name</label>
+                <input type="text" id="checkout-last-name" placeholder="LAST NAME" required class="noir-input">
+              </div>
+            </div>
+
+            <!-- Row: Address -->
+            <div>
+              <label for="checkout-address" class="sr-only">Address</label>
+              <input type="text" id="checkout-address" placeholder="ADDRESS" required class="noir-input">
+            </div>
+
+            <!-- Row: City, Province, Apartment -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div>
+                <label for="checkout-city" class="sr-only">City</label>
+                <input type="text" id="checkout-city" placeholder="CITY" required class="noir-input">
+              </div>
+              <div>
+                <label for="checkout-province" class="sr-only">Province</label>
+                <input type="text" id="checkout-province" placeholder="PROVINCE" class="noir-input">
+              </div>
+              <div>
+                <label for="checkout-apartment" class="sr-only">Apartment (Optional)</label>
+                <input type="text" id="checkout-apartment" placeholder="APARTMENT (OPTIONAL)" class="noir-input">
+              </div>
+            </div>
+
+            <!-- Row: Postal Code & Phone -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label for="checkout-postal" class="sr-only">Postal Code</label>
+                <input type="text" id="checkout-postal" placeholder="POSTAL CODE" required class="noir-input">
+              </div>
+              <div>
+                <label for="checkout-delivery-phone" class="sr-only">Phone Number</label>
+                <input type="tel" id="checkout-delivery-phone" placeholder="PHONE NUMBER" class="noir-input">
+              </div>
+            </div>
+
+            <!-- Save Address Checkbox -->
+            <div class="pt-2">
+              <label class="flex items-center gap-3 cursor-pointer text-xs text-neutral-600 tracking-wider">
+                <input type="checkbox" id="save-address" class="noir-checkbox">
+                <span>save this address for next time</span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 3: DELIVERY METHOD -->
+        <div class="border border-neutral-200">
+          <div class="checkout-section-header">
+            DELIVERY METHOD
+          </div>
+          <div class="p-5 sm:p-6 bg-white space-y-3">
+            <!-- Standard Delivery -->
+            <label id="label-delivery-standard" class="noir-radio-label active">
+              <div class="flex items-center gap-3">
+                <input type="radio" name="delivery-option" id="delivery-standard" value="standard" checked class="accent-black">
+                <span class="text-xs font-bold tracking-[0.16em] uppercase text-black">STANDARD DELIVERY</span>
+              </div>
+              <span class="text-xs tracking-wider uppercase text-neutral-500 font-medium">3–5 BUSINESS DAYS</span>
+              <span class="text-xs font-semibold tracking-wider text-black uppercase">LKR 2,000</span>
+            </label>
+
+            <!-- Express Delivery -->
+            <label id="label-delivery-express" class="noir-radio-label">
+              <div class="flex items-center gap-3">
+                <input type="radio" name="delivery-option" id="delivery-express" value="express" class="accent-black">
+                <span class="text-xs font-bold tracking-[0.16em] uppercase text-black">EXPRESS DELIVERY</span>
+              </div>
+              <span class="text-xs tracking-wider uppercase text-neutral-500 font-medium">1–2 BUSINESS DAYS</span>
+              <span class="text-xs font-semibold tracking-wider text-black uppercase">LKR 4,000</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- SECTION 4: PAYMENT -->
+        <div class="border border-neutral-200">
+          <div class="checkout-section-header">
+            PAYMENT
+          </div>
+          <div class="p-5 sm:p-6 bg-white space-y-4">
+            <!-- Payment Method Tabs -->
+            <div class="flex flex-wrap gap-2 mb-4">
+              <button type="button" class="payment-method-tab px-4 py-2 text-xs uppercase font-bold tracking-widest border border-black bg-black text-white transition-colors" data-provider="visa">
+                VISA
+              </button>
+              <button type="button" class="payment-method-tab px-4 py-2 text-xs uppercase font-bold tracking-widest border border-neutral-300 bg-white text-black hover:border-black transition-colors" data-provider="mastercard">
+                MASTERCARD
+              </button>
+              <button type="button" class="payment-method-tab px-4 py-2 text-xs uppercase font-bold tracking-widest border border-neutral-300 bg-white text-black hover:border-black transition-colors" data-provider="amex">
+                AMERICAN EXPRESS
+              </button>
+            </div>
+
+            <!-- Card Number -->
+            <div>
+              <label for="checkout-card-number" class="sr-only">Card Number</label>
+              <input type="text" id="checkout-card-number" placeholder="CARD NUMBER" maxlength="19" required class="noir-input font-mono">
+            </div>
+
+            <!-- Expiry & CVV -->
+            <div class="grid grid-cols-2 gap-4">
+              <div>
+                <label for="checkout-expiry" class="sr-only">Expiry Date</label>
+                <input type="text" id="checkout-expiry" placeholder="EXPIRY DATE (MM/YY)" maxlength="7" required class="noir-input font-mono">
+              </div>
+              <div>
+                <label for="checkout-cvv" class="sr-only">CVV</label>
+                <input type="password" id="checkout-cvv" placeholder="CVV" maxlength="4" required class="noir-input font-mono">
+              </div>
+            </div>
+
+            <!-- Save Payment Checkbox -->
+            <div class="pt-2">
+              <label class="flex items-center gap-3 cursor-pointer text-xs text-neutral-600 tracking-wider">
+                <input type="checkbox" id="save-payment" class="noir-checkbox">
+                <span>save payment information</span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 5: ORDER SUMMARY (SOLID BLACK CONTAINER MATCHING DESIGN) -->
+        <div class="bg-black text-white p-6 sm:p-8">
+          <h2 class="text-xs sm:text-sm font-bold tracking-[0.2em] uppercase text-white mb-6">
+            ORDER SUMMARY
+          </h2>
+
+          <div id="checkout-items-list" class="space-y-3 pb-4">
+            <!-- Dynamically populated by main.js -->
+            <div class="flex items-center justify-between py-1 text-xs tracking-wider">
+              <span class="text-white font-medium uppercase">THE NOIR BLAZER</span>
+              <span class="text-neutral-300">LKR 48,500</span>
+            </div>
+            <div class="flex items-center justify-between py-1 text-xs tracking-wider">
+              <span class="text-white font-medium uppercase">SIGNATURE SHIRT</span>
+              <span class="text-neutral-300">LKR 24,500</span>
+            </div>
+            <div class="flex items-center justify-between py-1 text-xs tracking-wider">
+              <span class="text-white font-medium uppercase">THE NOIR BLAZER</span>
+              <span class="text-neutral-300">LKR 48,500</span>
+            </div>
+          </div>
+
+          <!-- Shipping -->
+          <div class="flex items-center justify-between py-2 text-xs tracking-wider border-t border-neutral-800">
+            <span class="text-white uppercase font-medium">SHIPPING</span>
+            <span id="checkout-shipping-val" class="text-neutral-300 uppercase">COMPLIMENTARY</span>
+          </div>
+
+          <!-- Total -->
+          <div class="flex items-center justify-between pt-4 border-t border-neutral-800">
+            <span class="text-xs font-bold tracking-[0.2em] uppercase text-white">TOTAL</span>
+            <span id="checkout-total-val" class="text-base font-bold tracking-wide text-white">LKR 120,000</span>
+          </div>
+        </div>
+
+        <!-- Submit Button (Prominent Centered Solid Black) -->
+        <div class="pt-4 text-center">
+          <button type="submit" id="checkout-submit-btn" class="btn-noir-solid w-full sm:w-auto px-16 py-4 text-xs font-bold">
+            PROCEED TO CHECKOUT
+          </button>
+        </div>
+
+      </form>
+
+    </div>
+  </main>
+
+  <!-- Shared Footer Injected by JS -->
+  <div id="site-footer"></div>
+
+  <!-- Main JavaScript Module -->
+  <script type="module">
+    import { initCheckoutPage } from './js/main.js';
+    initCheckoutPage();
+  </script>
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Collection — MAISON NOIR</title>
+  <meta name="description" content="Explore the Maison Noir collection of refined essentials, tailoring, shirting, knitwear, and leather accessories.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>MN</text></svg>">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'brand-black': '#0a0a0a',
+            'brand-dark': '#111111',
+            'brand-white': '#ffffff',
+            'brand-gray-light': '#f5f5f5',
+            'brand-gray-bg': '#f8f8f8',
+            'brand-gray-input': '#ececec',
+            'brand-gray-border': '#e5e5e5',
+            'brand-gray-muted': '#737373',
+            'brand-gray-pill': '#ededed',
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+          },
+          aspectRatio: {
+            '3/4': '3 / 4',
+            '4/5': '4 / 5',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="bg-white text-black antialiased selection:bg-black selection:text-white">
+
+  <!-- Shared Header Injected by JS -->
+  <div id="site-header"></div>
+
+  <main id="main-content" class="py-10 sm:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
+      
+      <!-- Collection Page Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-8 border-b border-[#e5e5e5]">
+        <div>
+          <h1 class="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight uppercase text-black font-sans leading-none">
+            THE COLLECTION
+          </h1>
+        </div>
+        <p class="text-xs sm:text-[13px] text-neutral-500 tracking-wide max-w-md text-left md:text-right">
+          A considered wardrobe of refined essentials, designed with precision, simplicity and intention.
+        </p>
+      </div>
+
+      <!-- Filter and Sort Bar (Sticky / Accessible) -->
+      <div class="sticky top-20 z-30 bg-white/95 backdrop-blur-md py-4 border-b border-[#e5e5e5] my-2">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+          
+          <!-- Filter Dropdowns Left -->
+          <div class="flex flex-wrap items-center gap-3 sm:gap-4 text-xs font-semibold tracking-[0.16em] uppercase">
+            <!-- Category -->
+            <div class="relative">
+              <select id="filter-category" class="appearance-none bg-transparent hover:text-neutral-600 pr-6 py-1 cursor-pointer focus:outline-none focus:ring-1 focus:ring-black">
+                <option value="all">CATEGORY (ALL)</option>
+                <option value="women">WOMEN</option>
+                <option value="men">MEN</option>
+                <option value="tailoring">TAILORING</option>
+                <option value="shirting">SHIRTING</option>
+                <option value="outerwear">OUTERWEAR</option>
+                <option value="accessories">ACCESSORIES</option>
+              </select>
+              <svg class="w-3.5 h-3.5 absolute right-0 top-1/2 -translate-y-1/2 pointer-events-none text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </div>
+
+            <!-- Size -->
+            <div class="relative">
+              <select id="filter-size" class="appearance-none bg-transparent hover:text-neutral-600 pr-6 py-1 cursor-pointer focus:outline-none focus:ring-1 focus:ring-black">
+                <option value="all">SIZE (ALL)</option>
+                <option value="XS">XS</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+              </select>
+              <svg class="w-3.5 h-3.5 absolute right-0 top-1/2 -translate-y-1/2 pointer-events-none text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </div>
+
+            <!-- Color -->
+            <div class="relative">
+              <select id="filter-color" class="appearance-none bg-transparent hover:text-neutral-600 pr-6 py-1 cursor-pointer focus:outline-none focus:ring-1 focus:ring-black">
+                <option value="all">COLOR (ALL)</option>
+                <option value="black">BLACK</option>
+                <option value="white">WHITE</option>
+                <option value="beige">BEIGE</option>
+                <option value="camel">CAMEL</option>
+                <option value="grey">GREY</option>
+                <option value="sage">SAGE</option>
+                <option value="olive">OLIVE</option>
+              </select>
+              <svg class="w-3.5 h-3.5 absolute right-0 top-1/2 -translate-y-1/2 pointer-events-none text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </div>
+
+            <!-- Price -->
+            <div class="relative">
+              <select id="filter-price" class="appearance-none bg-transparent hover:text-neutral-600 pr-6 py-1 cursor-pointer focus:outline-none focus:ring-1 focus:ring-black">
+                <option value="all">PRICE (ALL)</option>
+                <option value="under-25k">UNDER LKR 25,000</option>
+                <option value="25k-50k">LKR 25,000 – 50,000</option>
+                <option value="over-50k">OVER LKR 50,000</option>
+              </select>
+              <svg class="w-3.5 h-3.5 absolute right-0 top-1/2 -translate-y-1/2 pointer-events-none text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </div>
+          </div>
+
+          <!-- Sort Dropdown Right -->
+          <div class="flex items-center justify-between md:justify-end gap-4 text-xs font-semibold tracking-[0.16em] uppercase">
+            <span id="collection-count" class="text-neutral-400 font-normal lowercase text-[11px] tracking-wider">
+              Loading pieces...
+            </span>
+            <div class="relative">
+              <select id="filter-sort" class="appearance-none bg-transparent hover:text-neutral-600 pr-6 py-1 cursor-pointer focus:outline-none focus:ring-1 focus:ring-black">
+                <option value="newest">SORT BY: NEWEST</option>
+                <option value="price-asc">PRICE: LOW TO HIGH</option>
+                <option value="price-desc">PRICE: HIGH TO LOW</option>
+              </select>
+              <svg class="w-3.5 h-3.5 absolute right-0 top-1/2 -translate-y-1/2 pointer-events-none text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Active Filter Summary Pills -->
+        <div id="active-filters-summary"></div>
+      </div>
+
+      <!-- Products Grid -->
+      <div id="collection-grid" class="grid grid-cols-2 md:grid-cols-3 gap-x-5 gap-y-12 sm:gap-x-8 sm:gap-y-14 pt-8">
+        <!-- Rendered dynamically by main.js -->
+      </div>
+
+      <!-- Pagination / Load More -->
+      <div class="mt-16 text-center">
+        <button type="button" id="collection-load-more" class="btn-noir-outline px-10 py-3.5 text-xs">
+          LOAD MORE PIECES
+        </button>
+      </div>
+
+      <!-- Artisanal Precision Atelier Banner -->
+      <div class="mt-24 pt-16 pb-12 border-t border-[#e5e5e5]">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+          <div class="max-w-xl">
+            <span class="text-[10px] tracking-[0.25em] uppercase text-neutral-400 font-semibold block mb-2">
+              MATERIAL ETHOS
+            </span>
+            <h2 class="text-xl sm:text-2xl font-bold tracking-[0.16em] uppercase text-black font-sans mb-3">
+              ARTISANAL PRECISION
+            </h2>
+            <p class="text-xs text-neutral-600 leading-relaxed tracking-wide">
+              Each garment is produced in restricted capsule quantities at our Colombo atelier, utilizing deadstock virgin fibers and bespoke Japanese woven textiles.
+            </p>
+          </div>
+          <div>
+            <a href="index.html#manifesto" class="text-xs tracking-[0.18em] uppercase font-bold text-black border-b border-black pb-1 hover:opacity-75 transition-opacity">
+              EXPLORE ATELIER NOTES
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Shared Footer Injected by JS -->
+  <div id="site-footer"></div>
+
+  <!-- Main JavaScript Module -->
+  <script type="module">
+    import { initCollectionPage } from './js/main.js';
+    initCollectionPage();
+  </script>
+</body>
+</html>

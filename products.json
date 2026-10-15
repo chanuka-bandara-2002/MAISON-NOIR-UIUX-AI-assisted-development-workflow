@@ -1,0 +1,358 @@
+[
+  {
+    "id": "noir-blazer",
+    "name": "THE NOIR BLAZER",
+    "subtitle": "Tailored Wool Jacket",
+    "price": 48500,
+    "edition": "EDITION 04 / TAILORING",
+    "category": "women",
+    "categoryLabel": "Tailoring",
+    "gender": "women",
+    "featured": true,
+    "newArrival": true,
+    "images": [
+      "assets/images/beige-blazer.jpg",
+      "assets/images/noir-blazer-main.jpg",
+      "assets/images/blazer-detail-1.jpg",
+      "assets/images/blazer-detail-2.jpg"
+    ],
+    "hoverImage": "assets/images/noir-blazer-main.jpg",
+    "colors": [
+      { "name": "Noir Black", "hex": "#111111", "image": "assets/images/noir-blazer-main.jpg" },
+      { "name": "Charcoal Grey", "hex": "#4a4a4a", "image": "assets/images/blazer-detail-1.jpg" },
+      { "name": "Blush Pink", "hex": "#eed8d7", "image": "assets/images/blazer-pink.jpg" },
+      { "name": "Mustard Ochre", "hex": "#c89d3f", "image": "assets/images/blazer-mustard.jpg" },
+      { "name": "Oatmeal Beige", "hex": "#ded1be", "image": "assets/images/beige-blazer.jpg" }
+    ],
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "description": "A refined tailored silhouette crafted for a modern wardrobe. Designed with a structured shoulder, clean architectural lines and a relaxed drape. A refined tailored silhouette crafted for a modern wardrobe. Designed with a structured shoulder, clean lines and a relaxed fit.",
+    "details": [
+      "100% fine worsted virgin wool, sourced sustainably",
+      "Structured architectural shoulder with discreet internal padding",
+      "Single-breasted front with custom-cast matte horn buttons",
+      "Pure cupro satin breathable lining",
+      "Functional interior jet pockets and exterior welt flap pockets",
+      "Tailored at our Colombo atelier in strictly limited editions"
+    ],
+    "care": [
+      "Specialist dry clean only",
+      "Cool iron with pressing cloth if required",
+      "Store on contoured wooden hanger in breathable garment bag"
+    ],
+    "delivery": "Complimentary insured express delivery on orders over LKR 50,000. Delivered in our signature rigid archival box with protective garment cover.",
+    "fit": "True to size for a structured silhouette. We recommend sizing up if you prefer a relaxed, oversized look."
+  },
+  {
+    "id": "signature-shirt",
+    "name": "SIGNATURE SHIRT",
+    "subtitle": "Relaxed Cotton Shirt",
+    "price": 24500,
+    "edition": "EDITION 02 / SHIRTING",
+    "category": "women",
+    "categoryLabel": "Shirting",
+    "gender": "women",
+    "featured": true,
+    "newArrival": true,
+    "images": [
+      "assets/images/signature-shirt.jpg",
+      "assets/images/beige-blazer.jpg"
+    ],
+    "hoverImage": "assets/images/beige-blazer.jpg",
+    "colors": [
+      { "name": "Optic White", "hex": "#ffffff", "image": "assets/images/signature-shirt.jpg" },
+      { "name": "Sky Blue", "hex": "#b9cde3", "image": "assets/images/signature-shirt.jpg" },
+      { "name": "Noir Black", "hex": "#111111", "image": "assets/images/signature-shirt.jpg" }
+    ],
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "description": "Cut from crisp 120-thread-count organic GOTS-certified poplin. Features dropped shoulders, clean French seams, and genuine mother-of-pearl button fastenings.",
+    "details": ["100% GOTS organic cotton poplin", "Mother of pearl buttons", "Relaxed fit silhouette", "Curved split hem"],
+    "care": ["Machine wash cold gentle cycle", "Line dry in shade", "Warm iron"],
+    "delivery": "Complimentary standard delivery over LKR 50,000.",
+    "fit": "Designed for a slightly oversized drape. Take your regular size."
+  },
+  {
+    "id": "tailored-trouser",
+    "name": "TAILORED TROUSER",
+    "subtitle": "Wool Blend Trouser",
+    "price": 32500,
+    "edition": "EDITION 03 / TAILORING",
+    "category": "women",
+    "categoryLabel": "Tailoring",
+    "gender": "women",
+    "featured": true,
+    "newArrival": true,
+    "images": [
+      "https://images.unsplash.com/photo-1584273143981-41c073dfe8f8?q=80&w=900&auto=format&fit=crop",
+      "assets/images/blazer-detail-1.jpg"
+    ],
+    "hoverImage": "assets/images/blazer-detail-1.jpg",
+    "colors": [
+      { "name": "Camel Tan", "hex": "#bda07b", "image": "https://images.unsplash.com/photo-1584273143981-41c073dfe8f8?q=80&w=900&auto=format&fit=crop" },
+      { "name": "Charcoal Grey", "hex": "#404040", "image": "assets/images/blazer-detail-1.jpg" }
+    ],
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "description": "High-waisted wide-leg trousers cut in Italian wool-twill with deep double front pleats and side adjuster tabs.",
+    "details": ["98% Virgin Wool, 2% Elastane", "High-rise waistline", "Double front pleats", "Side slant pockets"],
+    "care": ["Dry clean only", "Do not tumble dry"],
+    "delivery": "Standard 3-5 days delivery across Sri Lanka and worldwide.",
+    "fit": "Tailored through the waist and hips, falling into a wide fluid leg."
+  },
+  {
+    "id": "essential-tee",
+    "name": "ESSENTIAL TEE",
+    "subtitle": "Premium Cotton T-Shirt",
+    "price": 14500,
+    "edition": "EDITION 01 / ESSENTIALS",
+    "category": "men",
+    "categoryLabel": "Essentials",
+    "gender": "men",
+    "featured": true,
+    "newArrival": true,
+    "images": [
+      "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?q=80&w=900&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1516257984-b1b4d707412e?q=80&w=900&auto=format&fit=crop"
+    ],
+    "hoverImage": "https://images.unsplash.com/photo-1516257984-b1b4d707412e?q=80&w=900&auto=format&fit=crop",
+    "colors": [
+      { "name": "Noir Black", "hex": "#111111", "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?q=80&w=900&auto=format&fit=crop" },
+      { "name": "Optic White", "hex": "#ffffff", "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?q=80&w=900&auto=format&fit=crop" }
+    ],
+    "sizes": ["S", "M", "L", "XL"],
+    "description": "Crafted from heavyweight 260gsm combed Supima cotton with a compact rib collar that retains shape through wash and wear.",
+    "details": ["100% Supima Cotton", "260gsm heavy jersey", "Ribbed crew neckline", "Pre-shrunk finish"],
+    "care": ["Cold machine wash", "Tumble dry low or line dry"],
+    "delivery": "Standard 3-5 days delivery.",
+    "fit": "Classic tailored fit, clean chest and shoulders."
+  },
+  {
+    "id": "structured-coat",
+    "name": "STRUCTURED COAT",
+    "subtitle": "Wool Blend Coat",
+    "price": 64500,
+    "edition": "EDITION 05 / OUTERWEAR",
+    "category": "women",
+    "categoryLabel": "Outerwear",
+    "gender": "women",
+    "featured": true,
+    "newArrival": true,
+    "images": [
+      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=900&auto=format&fit=crop",
+      "assets/images/editorial-split.jpg"
+    ],
+    "hoverImage": "assets/images/editorial-split.jpg",
+    "colors": [
+      { "name": "Grey Herringbone", "hex": "#5e5e5e", "image": "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=900&auto=format&fit=crop" }
+    ],
+    "sizes": ["XS", "S", "M", "L"],
+    "description": "An ankle-length architectural overcoat tailored in double-face brushed wool blend. Features storm flap, waist sash belt, and horn hardware.",
+    "details": ["85% Virgin Wool, 15% Cashmere", "Full satin lining", "Detachable waist tie belt", "Storm flap back"],
+    "care": ["Dry clean only"],
+    "delivery": "Complimentary express delivery with luxury garment carrier.",
+    "fit": "Full length, tailored shoulder with easy body room."
+  },
+  {
+    "id": "noir-knit",
+    "name": "NOIR KNIT",
+    "subtitle": "Fine Gauge Knit",
+    "price": 29500,
+    "edition": "EDITION 03 / KNITWEAR",
+    "category": "men",
+    "categoryLabel": "Knitwear",
+    "gender": "men",
+    "featured": true,
+    "newArrival": true,
+    "images": [
+      "https://images.unsplash.com/photo-1516257984-b1b4d707412e?q=80&w=900&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=900&auto=format&fit=crop"
+    ],
+    "hoverImage": "https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=900&auto=format&fit=crop",
+    "colors": [
+      { "name": "Olive Khaki", "hex": "#5b634d", "image": "https://images.unsplash.com/photo-1516257984-b1b4d707412e?q=80&w=900&auto=format&fit=crop" },
+      { "name": "Noir Black", "hex": "#111111", "image": "https://images.unsplash.com/photo-1516257984-b1b4d707412e?q=80&w=900&auto=format&fit=crop" }
+    ],
+    "sizes": ["S", "M", "L", "XL"],
+    "description": "Seamless 16-gauge knit crafted from ultra-fine Merino wool yarn with tipping along the collar and hem.",
+    "details": ["100% Extra-fine Merino Wool", "16-gauge micro knit", "Ribbed knit trims", "Soft hand feel"],
+    "care": ["Hand wash in cold water or dry clean", "Dry flat"],
+    "delivery": "Standard 3-5 days delivery.",
+    "fit": "Regular fit, fits true to size."
+  },
+  {
+    "id": "noir-leather-tote",
+    "name": "NOIR LEATHER TOTE",
+    "subtitle": "Structured Leather Bag",
+    "price": 42500,
+    "edition": "EDITION 01 / LEATHER",
+    "category": "accessories",
+    "categoryLabel": "Accessories",
+    "gender": "unisex",
+    "featured": true,
+    "isAccessory": true,
+    "images": [
+      "assets/images/leather-tote.jpg"
+    ],
+    "hoverImage": "assets/images/leather-tote.jpg",
+    "colors": [
+      { "name": "Noir Black", "hex": "#111111", "image": "assets/images/leather-tote.jpg" }
+    ],
+    "sizes": ["ONE SIZE"],
+    "description": "Handcrafted structured calfskin leather tote bag featuring polished gold metal hardware, dual shoulder handles, and dedicated laptop compartment.",
+    "details": ["100% Full-grain calfskin leather", "Polished brass zipper", "Suede interior lining", "Internal key clip"],
+    "care": ["Wipe clean with soft microfiber cloth", "Condition with leather balm"],
+    "delivery": "Complimentary express delivery.",
+    "fit": "Dimensions: 38cm W x 32cm H x 14cm D. Accommodates up to 16-inch laptops."
+  },
+  {
+    "id": "classic-leather-belt",
+    "name": "CLASSIC LEATHER BELT",
+    "subtitle": "Full-Grain Leather",
+    "price": 14500,
+    "edition": "EDITION 02 / LEATHER",
+    "category": "accessories",
+    "categoryLabel": "Accessories",
+    "gender": "unisex",
+    "featured": true,
+    "isAccessory": true,
+    "images": [
+      "assets/images/classic-belt.jpg"
+    ],
+    "hoverImage": "assets/images/classic-belt.jpg",
+    "colors": [
+      { "name": "Artisan Cognac", "hex": "#7d4427", "image": "assets/images/classic-belt.jpg" }
+    ],
+    "sizes": ["80cm", "85cm", "90cm", "95cm", "100cm"],
+    "description": "Vegetable-tanned 35mm wide saddle leather belt hand-beveled and burnished with a solid brushed antique brass buckle.",
+    "details": ["100% Vegetable-tanned bridle leather", "Solid brass hardware", "Hand-stitched buckle loop", "35mm width"],
+    "care": ["Keep dry, nourish with leather wax once a year"],
+    "delivery": "Standard 3-5 days delivery.",
+    "fit": "Order one size up from your regular trouser waist measurement."
+  },
+  {
+    "id": "noir-card-holder",
+    "name": "NOIR CARD HOLDER",
+    "subtitle": "Leather Card Holder",
+    "price": 9500,
+    "edition": "EDITION 01 / SMALL LEATHER",
+    "category": "accessories",
+    "categoryLabel": "Accessories",
+    "gender": "unisex",
+    "featured": true,
+    "isAccessory": true,
+    "images": [
+      "assets/images/card-holder.jpg"
+    ],
+    "hoverImage": "assets/images/card-holder.jpg",
+    "colors": [
+      { "name": "Pebbled Noir", "hex": "#111111", "image": "assets/images/card-holder.jpg" }
+    ],
+    "sizes": ["ONE SIZE"],
+    "description": "Slim pebbled calfskin cardholder featuring an archival turnlock ornament and four credit card slots plus central cash note sleeve.",
+    "details": ["Grained calfskin leather", "Gold-toned turnlock ornament", "4 card slots + 1 center slip pocket", "Foil embossed logo"],
+    "care": ["Protect from direct moisture and heat"],
+    "delivery": "Standard 3-5 days delivery.",
+    "fit": "Compact 10cm x 7.5cm profile."
+  },
+  {
+    "id": "signature-silk-scarf",
+    "name": "SIGNATURE SILK SCARF",
+    "subtitle": "Pure Silk Twill",
+    "price": 18500,
+    "edition": "EDITION 04 / ACCESSORIES",
+    "category": "accessories",
+    "categoryLabel": "Accessories",
+    "gender": "unisex",
+    "featured": true,
+    "isAccessory": true,
+    "images": [
+      "assets/images/silk-scarf.jpg"
+    ],
+    "hoverImage": "assets/images/silk-scarf.jpg",
+    "colors": [
+      { "name": "Caramel & Gold", "hex": "#c49045", "image": "assets/images/silk-scarf.jpg" }
+    ],
+    "sizes": ["90x90 cm"],
+    "description": "100% Mulberry silk twill 16mm weight square scarf with hand-rolled edges, featuring heritage geometric equestrian motifs.",
+    "details": ["100% Mulberry silk twill", "Hand-rolled and sewn borders", "90cm x 90cm dimensions", "Designed in Colombo atelier"],
+    "care": ["Dry clean only", "Iron on reverse on silk setting"],
+    "delivery": "Standard 3-5 days delivery in gift presentation envelope.",
+    "fit": "Square silhouette for multiple styling configurations."
+  },
+  {
+    "id": "linen-oversized-shirt",
+    "name": "LINEN OVERSIZED SHIRT",
+    "subtitle": "Washed French Linen",
+    "price": 26500,
+    "edition": "EDITION 03 / RESORT",
+    "category": "men",
+    "categoryLabel": "Shirting",
+    "gender": "men",
+    "featured": false,
+    "newArrival": true,
+    "images": [
+      "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?q=80&w=900&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=900&auto=format&fit=crop"
+    ],
+    "hoverImage": "https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=900&auto=format&fit=crop",
+    "colors": [
+      { "name": "Sage Green", "hex": "#768c71", "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?q=80&w=900&auto=format&fit=crop" }
+    ],
+    "sizes": ["S", "M", "L", "XL"],
+    "description": "Airy garment-washed Normandy linen shirt with relaxed camp collar and relaxed silhouette.",
+    "details": ["100% French linen", "Garment washed for soft drape", "Camp collar", "Natural shell buttons"],
+    "care": ["Machine wash cold", "Hang dry"],
+    "delivery": "Standard 3-5 days delivery.",
+    "fit": "Relaxed breezy fit."
+  },
+  {
+    "id": "pleated-wide-trouser",
+    "name": "PLEATED WIDE TROUSER",
+    "subtitle": "Relaxed Wool Slacks",
+    "price": 34000,
+    "edition": "EDITION 02 / TAILORING",
+    "category": "men",
+    "categoryLabel": "Tailoring",
+    "gender": "men",
+    "featured": false,
+    "newArrival": true,
+    "images": [
+      "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?q=80&w=900&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=900&auto=format&fit=crop"
+    ],
+    "hoverImage": "https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=900&auto=format&fit=crop",
+    "colors": [
+      { "name": "Tobacco Brown", "hex": "#5e3e29", "image": "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?q=80&w=900&auto=format&fit=crop" }
+    ],
+    "sizes": ["30", "32", "34", "36"],
+    "description": "High-rise relaxed fit trousers with forward double pleats, button fly, and tailored cuffed hem.",
+    "details": ["100% Tropical virgin wool", "Double front pleats", "Curved side entry pockets"],
+    "care": ["Dry clean only"],
+    "delivery": "Standard 3-5 days delivery.",
+    "fit": "Loose draped straight leg."
+  },
+  {
+    "id": "atelier-tuxedo-jacket",
+    "name": "ATELIER TUXEDO JACKET",
+    "subtitle": "Peak Lapel Dinner Jacket",
+    "price": 58000,
+    "edition": "EDITION 05 / EVENING",
+    "category": "men",
+    "categoryLabel": "Tailoring",
+    "gender": "men",
+    "featured": false,
+    "newArrival": true,
+    "images": [
+      "https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=900&auto=format&fit=crop",
+      "assets/images/editorial-split.jpg"
+    ],
+    "hoverImage": "assets/images/editorial-split.jpg",
+    "colors": [
+      { "name": "Midnight Noir", "hex": "#0a0a0f", "image": "https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=900&auto=format&fit=crop" }
+    ],
+    "sizes": ["38R", "40R", "42R", "44R"],
+    "description": "Impeccably tailored evening tuxedo jacket in barathea wool with silk grosgrain peak lapels and covered buttons.",
+    "details": ["100% Barathea virgin wool", "Silk grosgrain lapels", "Canvassed construction"],
+    "care": ["Dry clean only"],
+    "delivery": "Complimentary express delivery with suit bag.",
+    "fit": "Tailored slim evening cut."
+  }
+]

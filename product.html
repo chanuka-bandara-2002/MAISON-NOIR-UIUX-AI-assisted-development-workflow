@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Noir Blazer — MAISON NOIR</title>
+  <meta name="description" content="The Noir Blazer: A refined tailored silhouette crafted for a modern wardrobe. Structured shoulder, clean lines and relaxed drape in pure virgin wool.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>MN</text></svg>">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'brand-black': '#0a0a0a',
+            'brand-dark': '#111111',
+            'brand-white': '#ffffff',
+            'brand-gray-light': '#f5f5f5',
+            'brand-gray-bg': '#f8f8f8',
+            'brand-gray-input': '#ececec',
+            'brand-gray-border': '#e5e5e5',
+            'brand-gray-muted': '#737373',
+            'brand-gray-pill': '#ededed',
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+          },
+          aspectRatio: {
+            '3/4': '3 / 4',
+            '4/5': '4 / 5',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="bg-white text-black antialiased selection:bg-black selection:text-white pb-16 md:pb-0">
+
+  <!-- Shared Header Injected by JS -->
+  <div id="site-header"></div>
+
+  <main id="main-content" class="py-8 sm:py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
+      
+      <!-- Breadcrumbs -->
+      <nav id="product-breadcrumbs" class="flex items-center gap-2 text-[11px] font-medium tracking-[0.2em] uppercase text-neutral-400 mb-8 overflow-x-auto whitespace-nowrap" aria-label="Breadcrumb">
+        <a href="index.html" class="hover:text-black">HOME</a>
+        <span>/</span>
+        <a href="collection.html" class="hover:text-black">COLLECTIONS</a>
+        <span>/</span>
+        <span class="text-black font-semibold">THE NOIR BLAZER</span>
+      </nav>
+
+      <!-- Main Product Display (2 Columns) -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
+        
+        <!-- Left: Image Gallery (7 cols) -->
+        <div class="lg:col-span-7 space-y-4">
+          <!-- Main Large Image -->
+          <div class="relative aspect-[3/4] bg-[#f5f5f5] overflow-hidden group cursor-zoom-in">
+            <img id="product-main-img" 
+                 src="assets/images/noir-blazer-main.jpg" 
+                 alt="The Noir Blazer main view" 
+                 class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                 loading="eager">
+          </div>
+
+          <!-- 2 Grid Detail Images (Matching Design Screenshot!) -->
+          <div class="grid grid-cols-2 gap-4">
+            <div class="aspect-square bg-[#f5f5f5] overflow-hidden cursor-pointer group border border-transparent hover:border-black transition-colors">
+              <img id="product-thumb-1" 
+                   src="assets/images/blazer-detail-1.jpg" 
+                   alt="The Noir Blazer detail view 1" 
+                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="aspect-square bg-[#f5f5f5] overflow-hidden cursor-pointer group border border-transparent hover:border-black transition-colors">
+              <img id="product-thumb-2" 
+                   src="assets/images/blazer-detail-2.jpg" 
+                   alt="The Noir Blazer detail view 2" 
+                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Product Purchase Details (5 cols) -->
+        <div class="lg:col-span-5 lg:sticky lg:top-28 space-y-6">
+          
+          <!-- Title & Price -->
+          <div>
+            <h1 id="product-title" class="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-[0.1em] uppercase text-black font-sans leading-tight">
+              THE NOIR BLAZER
+            </h1>
+            <p id="product-price" class="text-lg sm:text-xl font-medium tracking-wide text-black mt-2">
+              LKR 48,500
+            </p>
+          </div>
+
+          <!-- Description snippet -->
+          <p id="product-desc" class="text-xs text-neutral-600 tracking-wide leading-relaxed">
+            A refined tailored silhouette crafted for a modern wardrobe. Designed with a structured shoulder, clean architectural lines and a relaxed drape. A refined tailored silhouette crafted for a modern wardrobe. Designed with a structured shoulder, clean lines and a relaxed fit.
+          </p>
+
+          <!-- Color Swatches -->
+          <div>
+            <span class="block text-xs font-bold tracking-[0.2em] uppercase text-black mb-3">
+              COLOR
+            </span>
+            <div id="product-color-swatches" class="flex items-center gap-3">
+              <!-- Rendered by JS -->
+            </div>
+          </div>
+
+          <!-- Size Selector -->
+          <div>
+            <div class="flex items-center justify-between mb-2.5">
+              <span class="text-xs font-bold tracking-[0.2em] uppercase text-black">
+                SELECT SIZE
+              </span>
+              <button type="button" class="text-[11px] tracking-wider uppercase text-neutral-500 hover:text-black underline modal-trigger" data-modal="size-guide">
+                SIZE GUIDE
+              </button>
+            </div>
+            <div id="product-sizes" class="flex items-center gap-2">
+              <!-- Rendered by JS -->
+            </div>
+          </div>
+
+          <!-- Quantity Stepper & Add to Cart -->
+          <div class="space-y-3 pt-2">
+            <div class="flex items-center gap-3">
+              <!-- Stepper -->
+              <div class="flex items-center border border-neutral-300 h-12 px-2 bg-white">
+                <button type="button" id="qty-minus" class="px-2.5 py-1 text-sm font-medium hover:text-neutral-500" aria-label="Decrease quantity">-</button>
+                <span id="product-qty" class="px-3 text-xs font-bold w-8 text-center">1</span>
+                <button type="button" id="qty-plus" class="px-2.5 py-1 text-sm font-medium hover:text-neutral-500" aria-label="Increase quantity">+</button>
+              </div>
+
+              <!-- Main Solid Black Add to Cart Button -->
+              <button type="button" id="btn-add-to-cart" class="btn-noir-solid flex-1 h-12 flex items-center justify-center gap-2">
+                <span>ADD TO CART</span>
+                <svg class="w-4 h-4 fill-none stroke-current" viewBox="0 0 24 24" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119.993z"/></svg>
+              </button>
+            </div>
+
+            <!-- Outline Add to Wishlist Button -->
+            <button type="button" id="btn-add-wishlist" class="btn-noir-outline w-full h-12 flex items-center justify-center gap-2">
+              <span>ADD TO WISHLIST</span>
+              <svg class="w-4 h-4 stroke-current fill-none" viewBox="0 0 24 24" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"/></svg>
+            </button>
+          </div>
+
+          <!-- Free Shipping Notice Pill -->
+          <div class="bg-[#f5f5f5] p-3.5 flex items-center gap-3 border border-neutral-200">
+            <svg class="w-5 h-5 text-black shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.25V3.75a1.125 1.125 0 00-1.125-1.125h-9A1.125 1.125 0 003 3.75v10.5a1.125 1.125 0 001.125 1.125h1.5"/></svg>
+            <span class="text-[11px] font-semibold tracking-[0.16em] uppercase text-black">
+              COMPLIMENTARY SHIPPING ON ORDERS OVER LKR 50,000
+            </span>
+          </div>
+
+          <!-- Accordions (Description, Details & Care, Delivery & Returns, Size & Fit) -->
+          <div class="divide-y divide-neutral-200 border-y border-neutral-200 pt-1">
+            
+            <!-- Accordion 1: Description -->
+            <div class="accordion-item active py-4">
+              <button type="button" class="accordion-header w-full flex items-center justify-between text-left" aria-expanded="true">
+                <span class="text-xs font-bold tracking-[0.2em] uppercase text-black">DESCRIPTION</span>
+                <svg class="accordion-icon w-4 h-4 text-black transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </button>
+              <div class="accordion-content pt-3 text-xs text-neutral-600 leading-relaxed tracking-wide">
+                Designed for a refined everyday wardrobe, the Noir Blazer combines a structured silhouette with a relaxed fit. A timeless piece designed to be worn season after season.
+              </div>
+            </div>
+
+            <!-- Accordion 2: Details & Care -->
+            <div class="accordion-item py-4">
+              <button type="button" class="accordion-header w-full flex items-center justify-between text-left" aria-expanded="false">
+                <span class="text-xs font-bold tracking-[0.2em] uppercase text-black">DETAILS &amp; CARE</span>
+                <svg class="accordion-icon w-4 h-4 text-black transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </button>
+              <div class="accordion-content pt-3 text-xs text-neutral-600 leading-relaxed tracking-wide space-y-2">
+                <p>&bull; 100% fine worsted virgin wool, tailored at our Colombo atelier</p>
+                <p>&bull; Structured shoulder pad architecture with clean fluid lapels</p>
+                <p>&bull; 100% breathable cupro lining</p>
+                <p>&bull; Specialist professional dry clean only</p>
+              </div>
+            </div>
+
+            <!-- Accordion 3: Delivery & Returns -->
+            <div class="accordion-item py-4">
+              <button type="button" class="accordion-header w-full flex items-center justify-between text-left" aria-expanded="false">
+                <span class="text-xs font-bold tracking-[0.2em] uppercase text-black">DELIVERY &amp; RETURNS</span>
+                <svg class="accordion-icon w-4 h-4 text-black transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </button>
+              <div class="accordion-content pt-3 text-xs text-neutral-600 leading-relaxed tracking-wide space-y-2">
+                <p>Delivered in signature Maison Noir archival rigid packaging with monogrammed hanger.</p>
+                <p>Standard delivery within 3-5 business days. Express delivery available at checkout.</p>
+                <p>Complimentary returns and exchanges accepted within 14 days of delivery in pristine condition.</p>
+              </div>
+            </div>
+
+            <!-- Accordion 4: Size & Fit -->
+            <div class="accordion-item py-4">
+              <button type="button" class="accordion-header w-full flex items-center justify-between text-left" aria-expanded="false">
+                <span class="text-xs font-bold tracking-[0.2em] uppercase text-black">SIZE &amp; FIT</span>
+                <svg class="accordion-icon w-4 h-4 text-black transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </button>
+              <div class="accordion-content pt-3 text-xs text-neutral-600 leading-relaxed tracking-wide">
+                True to size for a sharp tailored silhouette. For an oversized menswear drape, we recommend ordering one size above your usual measurement. Model is 178cm and wears size S.
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+      <!-- COMPLETE THE LOOK Section -->
+      <section class="mt-28 pt-16 border-t border-[#e5e5e5]">
+        <div class="mb-10">
+          <h2 class="text-xl sm:text-2xl font-bold tracking-[0.15em] uppercase text-black font-sans">
+            COMPLETE THE LOOK
+          </h2>
+        </div>
+
+        <div id="product-complete-look-grid" class="grid grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
+          <!-- Rendered dynamically by main.js -->
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Mobile Sticky Add to Cart Bar -->
+  <div id="mobile-sticky-bar" class="sticky-mobile-cta p-3 md:hidden">
+    <div class="flex items-center justify-between gap-3 max-w-md mx-auto">
+      <div>
+        <span class="text-[11px] font-bold uppercase tracking-wider block text-black">THE NOIR BLAZER</span>
+        <span class="text-[11px] text-neutral-500">LKR 48,500</span>
+      </div>
+      <button type="button" id="mobile-sticky-add-cart" class="btn-noir-solid py-2.5 px-6 text-xs">
+        ADD TO CART
+      </button>
+    </div>
+  </div>
+
+  <!-- Shared Footer Injected by JS -->
+  <div id="site-footer"></div>
+
+  <!-- Main JavaScript Module -->
+  <script type="module">
+    import { initProductPage } from './js/main.js';
+    initProductPage();
+  </script>
+</body>
+</html>

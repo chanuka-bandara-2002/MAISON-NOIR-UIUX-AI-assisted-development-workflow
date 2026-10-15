@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MAISON NOIR — The Art of Less | Luxury Fashion Atelier</title>
+  <meta name="description" content="MAISON NOIR is an archival luxury fashion atelier creating refined essentials with quiet architectural proportions, bespoke tailoring, and timeless craftsmanship.">
+  <meta property="og:title" content="MAISON NOIR — The Art of Less">
+  <meta property="og:description" content="A considered wardrobe of refined essentials, designed for precision, simplicity and intention.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>MN</text></svg>">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'brand-black': '#0a0a0a',
+            'brand-dark': '#111111',
+            'brand-white': '#ffffff',
+            'brand-gray-light': '#f5f5f5',
+            'brand-gray-bg': '#f8f8f8',
+            'brand-gray-input': '#ececec',
+            'brand-gray-border': '#e5e5e5',
+            'brand-gray-muted': '#737373',
+            'brand-gray-pill': '#ededed',
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+          },
+          aspectRatio: {
+            '3/4': '3 / 4',
+            '4/5': '4 / 5',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="bg-white text-black antialiased selection:bg-black selection:text-white">
+
+  <!-- Shared Header Injected by JS -->
+  <div id="site-header"></div>
+
+  <main id="main-content">
+    <!-- Hero Banner Section -->
+    <section class="relative w-full overflow-hidden bg-neutral-900 min-h-[640px] lg:min-h-[760px] flex items-center">
+      <div class="absolute inset-0 z-0">
+        <img src="assets/images/hero-banner.jpg" 
+             alt="Maison Noir Winter Capsule 2026 Collection in sunlit colonnade" 
+             class="w-full h-full object-cover object-center scale-100 transition-transform duration-1000 ease-out hover:scale-105"
+             loading="eager">
+        <div class="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-transparent lg:from-black/50"></div>
+      </div>
+
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 py-24 sm:py-32 w-full text-white">
+        <div class="max-w-xl">
+          <span class="block text-xs uppercase tracking-[0.28em] text-neutral-300 font-medium mb-3">
+            WINTER CAPSULE 2026
+          </span>
+          <h1 class="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight uppercase leading-[0.95] mb-6">
+            THE ART<br>OF LESS.
+          </h1>
+          <p class="text-xs sm:text-sm text-neutral-200 tracking-wider font-normal leading-relaxed max-w-md mb-8">
+            Refined essentials crafted for a modern wardrobe. Clean lines, architectural drape, and pure sustainable materials.
+          </p>
+          <div>
+            <a href="collection.html" class="inline-flex items-center justify-center bg-black hover:bg-neutral-900 text-white border border-white/20 text-xs font-semibold tracking-[0.2em] uppercase px-8 py-4 transition-all duration-300 hover:tracking-[0.25em]">
+              EXPLORE COLLECTION
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Value Ribbon Ticker -->
+    <div class="bg-[#f7f7f7] border-y border-[#e5e5e5] py-3.5 overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-8 flex items-center justify-between text-[11px] uppercase tracking-[0.2em] font-medium text-neutral-600 gap-6 overflow-x-auto whitespace-nowrap">
+        <span>COMPLIMENTARY SHIPPING OVER LKR 50,000</span>
+        <span class="text-neutral-400">&bull;</span>
+        <span>ATELIER TAILORED SILHOUETTES</span>
+        <span class="text-neutral-400">&bull;</span>
+        <span>JAPANESE & ITALIAN DEADSTOCK FABRICS</span>
+        <span class="text-neutral-400 hidden sm:inline">&bull;</span>
+        <span class="hidden sm:inline">COLOMBO ATELIER PRODUCTION</span>
+      </div>
+    </div>
+
+    <!-- New Arrivals Section -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 py-16 sm:py-24">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10 pb-4 border-b border-[#e5e5e5]">
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-bold tracking-[0.12em] uppercase text-black font-sans">
+            NEW ARRIVALS
+          </h2>
+        </div>
+        <p class="text-xs sm:text-[13px] text-neutral-500 tracking-wide max-w-md text-left sm:text-right">
+          A considered wardrobe of refined essentials, designed for precision, simplicity and intention.
+        </p>
+      </div>
+
+      <!-- 6-Product Grid -->
+      <div id="home-new-arrivals-grid" class="grid grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-12 sm:gap-x-8 sm:gap-y-14">
+        <!-- Rendered dynamically by main.js -->
+      </div>
+
+      <div class="mt-14 text-center">
+        <a href="collection.html" class="btn-noir-outline px-10 py-3.5">
+          VIEW ALL PRODUCTS
+        </a>
+      </div>
+    </section>
+
+    <!-- Editorial Split Section: LESS, BUT BETTER. -->
+    <section id="manifesto" class="bg-[#f5f5f5] py-20 lg:py-28 my-8 border-y border-[#e5e5e5]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <!-- Left Editorial Image -->
+          <div class="relative aspect-[3/4] overflow-hidden bg-neutral-200 shadow-sm">
+            <img src="assets/images/editorial-split.jpg" 
+                 alt="Maison Noir Atelier Evening Gowns and Tuxedos" 
+                 class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                 loading="lazy">
+          </div>
+
+          <!-- Right Content -->
+          <div class="lg:pl-6 max-w-lg">
+            <span class="block text-xs uppercase tracking-[0.25em] text-neutral-500 font-semibold mb-3">
+              THE PHILOSOPHY
+            </span>
+            <h2 class="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight uppercase text-black mb-6 leading-none">
+              LESS, BUT<br>BETTER.
+            </h2>
+            <p class="text-xs sm:text-sm text-neutral-700 font-medium tracking-wide uppercase mb-4 leading-relaxed">
+              MAISON NOIR is built on a quiet philosophy of quality over quantity.
+            </p>
+            <p class="text-xs sm:text-sm text-neutral-600 tracking-wide leading-relaxed mb-8">
+              We create refined essentials with considered architectural proportions and meticulous tailoring. Every garment is crafted in restricted batches at our Colombo atelier, rejecting seasonal churn in favor of permanence.
+            </p>
+            <div>
+              <a href="collection.html" class="btn-noir-solid">
+                READ OUR MANIFESTO
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Curated Looks Section -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 py-16 sm:py-24">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10 pb-4 border-b border-[#e5e5e5]">
+        <div>
+          <span class="text-[10px] tracking-[0.25em] uppercase text-neutral-400 font-semibold block mb-1">CURATED CAPSULE</span>
+          <h2 class="text-2xl sm:text-3xl font-bold tracking-[0.12em] uppercase text-black font-sans">
+            ESSENTIAL LOOKS
+          </h2>
+        </div>
+        <p class="text-xs sm:text-[13px] text-neutral-500 tracking-wide max-w-md text-left sm:text-right">
+          READY FOR THE SEASON — ARCHITECTURAL LAYERS & TIMELESS SEPARATES.
+        </p>
+      </div>
+
+      <!-- Curated Grid -->
+      <div id="home-curated-grid" class="grid grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-12 sm:gap-x-8 sm:gap-y-14">
+        <!-- Rendered dynamically by main.js -->
+      </div>
+    </section>
+
+    <!-- Newsletter Section: THE MAISON NOIR LIST -->
+    <section class="bg-[#f5f5f5] py-20 border-y border-[#e5e5e5]">
+      <div class="max-w-3xl mx-auto px-4 text-center">
+        <span class="text-xs font-semibold tracking-[0.25em] uppercase text-neutral-500 block mb-2">
+          NEWSLETTER EXCLUSIVE
+        </span>
+        <h2 class="text-2xl sm:text-4xl font-bold tracking-[0.15em] uppercase text-black mb-3">
+          THE MAISON NOIR LIST
+        </h2>
+        <p class="text-xs text-neutral-600 tracking-wider uppercase mb-8 max-w-lg mx-auto">
+          BE THE FIRST TO ACCESS PRIVATE SALES, NEW RELEASES AND EDITORIAL STORIES.
+        </p>
+
+        <form id="newsletter-form" class="max-w-md mx-auto flex flex-col sm:flex-row gap-2 mb-4">
+          <input type="email" 
+                 id="newsletter-email" 
+                 placeholder="ENTER EMAIL" 
+                 required
+                 class="noir-input flex-1 text-center sm:text-left bg-white border border-neutral-300 focus:border-black"
+                 aria-label="Email address for newsletter">
+          <button type="submit" class="btn-noir-solid py-3 px-8 text-xs shrink-0">
+            SUBSCRIBE
+          </button>
+        </form>
+
+        <p class="text-[10px] text-neutral-400 tracking-widest uppercase">
+          BY SUBSCRIBING YOU AGREE TO OUR PRIVACY POLICY & TERMS.
+        </p>
+      </div>
+    </section>
+
+    <!-- Accessories Strip: COMPLETE YOUR LOOK -->
+    <section class="bg-black text-white py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 text-center mb-10">
+        <h2 class="text-xl sm:text-2xl font-bold tracking-[0.2em] uppercase text-white mb-2">
+          COMPLETE YOUR LOOK
+        </h2>
+        <p class="text-xs text-neutral-400 tracking-wider">
+          Considered accessories to complement your Maison Noir wardrobe.
+        </p>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
+        <div id="home-accessories-grid" class="grid grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Rendered dynamically by main.js -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Shared Footer Injected by JS -->
+  <div id="site-footer"></div>
+
+  <!-- Main JavaScript Module -->
+  <script type="module">
+    import { initHomePage } from './js/main.js';
+    initHomePage();
+  </script>
+</body>
+</html>
